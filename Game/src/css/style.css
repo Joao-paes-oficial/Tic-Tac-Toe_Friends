@@ -1,5 +1,5 @@
 body {
-    background-color: turquoise;
+    background-color: #21546e;
     font-family: Verdana, sans-serif;
     color: white;
 }
@@ -30,12 +30,23 @@ body {
 }
 
 .row > div {
-    font-size: 90px;
     display: inline-block;
+    font-size: 90px;
     text-align: center;
-    border: solid 1px white;
     vertical-align: top;
+    line-height: 100px;
     width: 100px;
     height: 100px;
-    line-height: 100px;
 }
+
+.right {
+    border-right: solid 5px white;
+  }
+  
+  .bottom {
+    border-bottom: solid 5px white;
+  }
+  
+  .reset {
+    margin-top: 100px;
+  }
