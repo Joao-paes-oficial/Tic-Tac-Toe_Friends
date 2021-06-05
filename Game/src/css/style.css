@@ -1,0 +1,41 @@
+body {
+    background-color: turquoise;
+    font-family: Verdana, sans-serif;
+    color: white;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.header {
+    margin-top: 50px;
+}
+
+.controls {
+    margin-top: 40px;
+}
+
+.checkBox {
+    margin-left: 40px;
+}
+
+.boardContainer {
+    margin-top: 40px;
+}
+
+.row {
+    font-size: 0px;
+}
+
+.row > div {
+    font-size: 90px;
+    display: inline-block;
+    text-align: center;
+    border: solid 1px white;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
