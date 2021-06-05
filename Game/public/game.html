@@ -4,41 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="../src/css/style.css">
+    <title>Tic Toc Toe</title>
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Tic Tac Toe</h1>
+            <h1>Tic Toc Toe</h1>
         </div>
         <div class="controls">
             <h3>You're playing against the computer Choose X or O</h3>
             <form action="#">
-                <input class="checkBox" type="checkbox" name="xPlayer" value="X">X
-                <input class="checkBox" type="checkbox" name="oPlayer" value="O">O
+                <input class="checkBox" type="checkbox" name="xPlayer" value="X">X Player
+                <input class="checkBox" type="checkbox" name="oPlayer" value="O">O Player
             </form>
         </div>
         <div class="boardContainer">
             <div class="row">
-                <div id="1" class="square">X</div>
-                <div id="2" class="square">X</div>
-                <div id="3" class="square">X</div>
+                <div id="0" class="square bottom right"></div>
+                <div id="1" class="square bottom right"></div>
+                <div id="2" class="square bottom"></div>
             </div>
 
             <div class="row">
-                <div id="4" class="square">X</div>
-                <div id="5" class="square">X</div>
-                <div id="6" class="square">X</div>
+                <div id="3" class="square bottom right"></div>
+                <div id="4" class="square bottom right"></div>
+                <div id="5" class="square bottom"></div>
             </div>
 
             <div class="row">
-                <div id="7" class="square">X</div>
-                <div id="8" class="square">X</div>
-                <div id="9" class="square">X</div>
+                <div id="6" class="square bottom right"></div>
+                <div id="7" class="square bottom right"></div>
+                <div id="8" class="square bottom"></div>
             </div>
         </div>
     </div>
-    <script src="../src/js/script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>
