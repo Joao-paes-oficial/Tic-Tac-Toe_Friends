@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Toc Toe</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -33,14 +33,19 @@
             </div>
 
             <div class="row">
-                <div id="6" class="square bottom right"></div>
-                <div id="7" class="square bottom right"></div>
-                <div id="8" class="square bottom"></div>
+                <div id="6" class="square right"></div>
+                <div id="7" class="square right"></div>
+                <div id="8" class="square"></div>
             </div>
+        </div>
+        <div class="reset">
+            <a id="resetBoard" class="reset" onclick="">
+                Reset board
+            </a>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="../static/js/script.js"></script>
+    <script src="../src/js/script.js"></script>
 </body>
 </html>
