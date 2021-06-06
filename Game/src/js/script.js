@@ -91,12 +91,13 @@ function checkWinner() {
 }
 
 function scoreboard(counterX, counterO) {
-    var placarPlayer = document.getElementById("placar");
+    var valorX = document.getElementById("valorX");
+    var valorO = document.getElementById("valorO");
 
     if(user == "X") {
-        placarPlayer.innerHTML = `<h3>Player X: ${counterX} | Player O: ${counterO}</h3>`;
+        valorX.innerHTML = `${counterX}`;
     }else {
-        placarPlayer.innerHTML = `<h3>Player X: ${counterX} | Player O: ${counterO}</h3>`;
+        valorO.innerHTML = `${counterO}`;
     }
 }
 

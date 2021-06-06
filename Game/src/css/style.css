@@ -1,53 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
 body {
-    background-color: #21546e;
-    font-family: Verdana, sans-serif;
-    color: white;
+  background: url(../img/back.jpg);
+  font-family: "Roboto", sans-serif;
+  color: #825551;
 }
 
 .container {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  width: 400px;
+  height: 800px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: skyblue;
 }
 
 .header {
-    margin-top: 50px;
+  margin-top: 80px;
+  font-family: "Suez One", serif;
 }
 
 .controls {
-    margin-top: 40px;
+  margin-top: 40px;
+}
+
+#scoreboard {
+  font-size: 30px;
+}
+form {
+  font-size: 20px;  
 }
 
 .checkBox {
-    margin-left: 40px;
+  margin-left: 40px; 
+  width: 16px;
+  height: 16px;
 }
 
 .boardContainer {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .row {
-    font-size: 0px;
+  font-size: 0px;
 }
 
 .row > div {
-    display: inline-block;
-    font-size: 90px;
-    text-align: center;
-    vertical-align: top;
-    line-height: 100px;
-    width: 100px;
-    height: 100px;
+  display: inline-block;
+  font-size: 90px;
+  text-align: center;
+  vertical-align: top;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
 }
 
 .right {
-    border-right: solid 5px white;
-  }
-  
-  .bottom {
-    border-bottom: solid 5px white;
-  }
-  
-  .reset {
-    margin-top: 100px;
-    cursor: pointer;
-  }
+  border-right: solid 5px black;
+}
+
+.bottom {
+  border-bottom: solid 5px black;
+}
+
+.reset {
+  background-color: springgreen;
+    height: 60px;
+    border-radius: 15px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 25px;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+}
+
+.btnreset {
+    padding-top: 15px;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
