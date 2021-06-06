@@ -6,13 +6,13 @@ var board = [
 
 var turn, squareId, user, computer, row, col;
 var arrLength = 3;
+var counterX = 0, counterO = 0;
 
 $(document).ready(function() {
     $(".checkBox").click(function() {
         if($(this).is(":checked")) {
             user = $(this).val();
             turn = user;
-            computer = (user == "X") ? "O" : "X";
         }
     });
 
@@ -21,7 +21,9 @@ $(document).ready(function() {
         playerMove();
         if(checkWinner()) {
             alert(turn + " wins the game!");
-            resetBoard();
+            if(turn == "X") counterX++;
+            if(turn == "O") counterO++;
+            scoreboard(counterX, counterO);
         } 
         if(!checkDraw()) {
             alert("It's a draw!");
@@ -88,6 +90,22 @@ function checkWinner() {
     return false;
 }
 
+function scoreboard(counterX, counterO) {
+    var placarPlayer = document.getElementById("placar");
+
+    if(user == "X") {
+        placarPlayer.innerHTML = `<h3>Player X: ${counterX} | Player O: ${counterO}</h3>`;
+    }else {
+        placarPlayer.innerHTML = `<h3>Player X: ${counterX} | Player O: ${counterO}</h3>`;
+    }
+}
+
 function resetBoard() {
-    document.location.reload();
+    $(".square").text("");
+    $(".checkBox").prop("checked", false); 
+    for(var i = 0; i < arrLength; i++) {
+        for(var j = 0; j < board[i].length; j++){
+            board[i][j] = "";  
+        }
+    }
 }
