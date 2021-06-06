@@ -4,78 +4,46 @@ var board = [
     ["", "", ""]
 ];
 
-var player, squareId, user, computer, row, col;
+var turn, squareId, user, computer, row, col;
 var arrLength = 3;
 
 $(document).ready(function() {
     $(".checkBox").click(function() {
         if($(this).is(":checked")) {
             user = $(this).val();
-            player = user;
+            turn = user;
             computer = (user == "X") ? "O" : "X";
         }
     });
 
     $(".square").click(function() {
         squareId = $(this).attr("id");
-        console.log(squareId);
         playerMove();
-        computerMove();
         if(checkWinner()) {
-            alert(player + " wins the game!");
+            alert(turn + " wins the game!");
+            resetBoard();
         } 
         if(!checkDraw()) {
             alert("It's a draw!");
-        } 
+        }  
     });
-
-    /* $(".square").click(function() {
-        squareId = $(this).attr("id");
-        playerMove();
-        computerMove();
-        if(checkWinner()) {
-            alert(player + " wins the game!");
-        } 
-        if(!checkDraw()) {
-            alert("It's a draw!");
-        } 
-    }); */
 
     $(".reset").click(function() {
         resetBoard();
     });
 }); 
 
-function computerWins() {
-    playerMove();
-    computerMove();
-    if(checkWinner()) {
-        alert(computer + " wins the game!");
-    } 
-}
 
 function playerMove() {
     if($("#"+squareId).text() == ""){
-        $("#" + squareId).text(player);
+        $("#" + squareId).text(turn);
         row = getRow();
         col = getCol();
-        board[row][col] = player;
+        board[row][col] = turn;
     }
     else{
         alert("Try other movement.");
     }
-}
-
-function computerMove() {
-    var random;
-    var min = 0, max = 8;
-    do {
-        random = Math.floor(Math.random() * (max + min));
-    } while($("#"+random).text() != "")
-    $("#"+random).text(computer);
-    row = getRow();
-    col = getCol();
-    board[row][col] = computer;
 }
 
 function checkDraw() {
@@ -87,7 +55,7 @@ function checkDraw() {
         }
     }
     return false;
-}
+} 
 
 function getRow() {
     return Math.floor(squareId / arrLength);
@@ -104,7 +72,7 @@ function checkWinner() {
     } 
 
     for(var i = 0; i < arrLength; i++) {
-        if(board[0][1] != "" && board[0][i] == board[1][i] && board[1][i] == board[2][i]) return true;
+        if(board[0][i] != "" && board[0][i] == board[1][i] && board[1][i] == board[2][i]) return true;
     }  
 
     if(board[0][0] != "" && board[0][0] == board[1][1] && board[1][1] == board[2][2]) return true;
